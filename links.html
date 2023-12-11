@@ -17,3 +17,6 @@ links:
   {% for item in page.links.devels %}
     <a href="{{ item.url }}">{{ item.name }}</a>
   {% endfor %}
+  {% for item in page.links %}
+  <b>{{ item }}</b>
+  {% endfor %}

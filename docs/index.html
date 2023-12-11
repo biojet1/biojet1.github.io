@@ -1,1 +1,189 @@
-search.html
+<html dir="ltr" lang="en">
+	<head>
+		<meta content="text/html; charset=UTF-8" http-equiv="content-type"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Searches</title>
+		<style type="text/css">
+		html, body {
+		min-height: 100%;
+		height: 100%;
+		font-size: 100%;
+		}
+		form   {
+		display:block;
+		margin:0;
+		background:none;
+		}
+		form  *[type=text], form  *[placeholder] {
+		width:100%;
+		padding: 1ex 1ex;
+		min-height: 2.5rem;
+		/*  padding-left: 2.5rem;*/
+		margin: 0;
+		font-size:100%;
+		display: block;
+		}
+		form > *[type=submit] {
+		/* position: absolute;*/
+		min-width: 25%;
+		margin-top: .1rem;
+		margin-bottom: .3rem;
+		/*  margin-left: .3rem; */
+		}
+		form > table {
+		width:100%;
+		}
+		form > table *[placeholder]{
+		width:100%;
+		}
+		form > table  td:nth-child(1){
+		width: 1cm;
+		height: 1cm;
+		}
+		form > table td:nth-child(3){
+		width: 1cm;
+		height: 1cm;
+		}
+		form > table td:nth-child(3) *{
+		font-size: 0.5cm;
+		}
+		form > table > tr > td > label > img{
+			width: 0.8cm;
+			height: 0.8cm;
+		}
+		form > table > tr > td > label > img{
+background-size: 100% 100%;
+		}
+		.icon_search_yahoo {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAQAAACXxM65AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAgY0hSTQAAeiYAAICEAAD6AAAAgOgAAHUwAADqYAAAOpgAABdwnLpRPAAAAAJiS0dEAACqjSMyAAAACXBIWXMAAABIAAAASABGyWs+AAAACXZwQWcAAAC0AAAAtAAUIIfWAAALfElEQVR42u2dC3AV1RnH/+EmJCGEBJJoMECBYKVQsEAp72KYamAqYBEoOCMjiLwUEUfAF4LtVMGR1vIYrI5FqCKPjkpwQBERCOERFASJtgEDATEJj0DiJIHc3Hv7hQZigNxvc3N29+zNd/4zTEJ293znt2fP953HngWOYimGIQGSzElxGIolyAZ8JC+KsRMv4LeIETKKUjT64ll8jiJ4rjC+8s9VVSAfmzAbfdBCSAWYYvBrPIEPcRruGmxr/FIN/DS24HmkIBGhws5AaoR4qp5PIQ251wH2C7pa57EHizEWyYhCiPC8IUUgCcOxgJqIfGqA/ZFkQF+VB8exEfNxL1pSHW/oyF1ojruo/q7Btyg3SNDgYdXy0sORhj/hfnREWIPCG4JWGEwebDW+qaV5UAq6GrgbF6lheQMzcA9up4coOOtuEvphAhbhU+RR7fUGzCvgE2tCL0EB9mElBTQj0YPufISD0SagE9Xc6dS/2EpPbzGFBioYKblITblRiBzsIuzz8RBFLndQ7KKvK21MXYp2+A1GUZu7DJup1S1AmQlUTLjk9SrHWep/7sX71EN6htCn4k6q83EU0odTWGRdCqPb3Zxu+s8xAKOpwVuIf2EbsiiULbGAggVZ3DxSL6Q45hD1Rz/EP/EqxeyP4UEMI1/enUAkEZAoNEEkNUHhVOfCKNIJpYfaRTemWq4rCqW/htEx4XRsJJ0VjVuohnahftlgwjkJs/AXLMdaagb2478UhJXZVGKbsuVb/XJqHc/gFL6jh/kwviQPsBvpdGO2V2kH/ZxBz8l+fIUjyMYJclaFKKVb6NWyRJqCDj4JAgEtoEUCWkALaEEgoAW0SEALaAEtEtACWmQ36Arsx0V2Rt1ja5H5/IuoFG7da/Q8tMIIvIZ0nCDk7qrRYQ9KkIevsRYz0R1v2Qp6BbqRFWvJmjyyyvOTqeZcsvo13E8leEH/puMCulRNzjdDG3RCT/RBb3RFMhKurXr6Gc7bhvk82lVZEUoWJZNlvcnCnmRpG7L4/zObXagUDmijP0Y4O38317Z5kHmsbeHY7Axn6MFktjCxyLYF8zE0Z22bZIoPMaU4Z+mR5NIYG1yiBw+wdiWT9Q4K7z6Ci11PscVy0FvZRs1FljsqjvZgIlt3elmynqJapeT2uPSwac+ZacU6R0ESt6Z4maWgl7PLdVqR1Q7sGa5jF7HfRpGsVZjzkcRYE0qxtSO74B4K/bn0qGWgp7O2jDDVPZtauBz2ba8wHLAE80F2LXc8vnPyoNISdhXpQMNr5gOXGynsIvPFzh69K8EAtoirTAf9Dnu7+5seAZleyN1owhSyHc6YasFZtGcsaIIM549He/A464ZmmTjy4cUcNv/pFvRSLXBEBWjDvmV6wEQ3GM3k3ppCvyCZYVnJ1qlU5QPtV93gEDbvt4NnKqsCd7G9xHdMyXk1O+YyUNHLQJrMGX7JvqfV3oTu7zl2FDGcLAuyydnH2Ef4KeV5zmbDOut6ppZl9AM7yBSFQ0pzPExX9J+SyKogXG7wOjt6do/C9rKCHCznF5YH57qOUvRlmw9142fr2Lz6kEVBuoBmJ+sS2yqaHy+8NtdduxvcEbwrlTx4xIBLrH8v0UtX4dJEi+csLZ61O4lEBkBTfKEgmGzK5HIrWRLka+8Ws3XtblyqVw6XyKly6e9OX3tnxCX2YGeiV9Yrh1Vsb7C7pW7QJtA+bGNBtEVBPYaw2rJh3TYbSm3LeqGx7KP9eMDXnmFg6Y6voYA+we6rF4F9AV05kw0gW1DuDQa0DwvZUYh+AQycutGfnThbYFOJbcq2GHeySN6s81XfYm9fV8q5QYH2YSO7AKCuy2vy6QxucUOabeW1LWO3geU1U+rQe/NgmoElMu6GB9qHb9i9fcOxy/DVMtiVos2QZWNpbczah7lsHextcL1FKfqw13re1rLamvkFdqrJ6AoifkVUsgnvpTgGtA9r2HqYiOPsVY6jJXud92wuqc3Zu9n5ceBBxiV6MI69xkAb3aAWoH3YyzqxxvjE7xW20BGcU91jezltN8CHCWx97OJn/8Uy6oRwabwGpdTAhFzEsy5xYa1nv8K6wTibRje0A1058sGlaOTU4gabsecu0KKMWhhxEb9kcY28iTtzYxR7Xmd2E4AGBNqH9exkgAsbbjJeEsqetV6TEmpixmUMNlA3C6/r7vDPQSpdWUDX0H5Estjm1ThjvoGPd2RqUz5tDPFgCgsuBkeuHZ+FWPb4yTZvwaIlaB/y2DAPGFLlEivwe/bYOAtfF3UUaB/+ysILrRqzWGPg01KLtCqbVsaUoROLrz25xEID21R0tGHthmNA+/CBgZo6G3PY3mAo3tesZJqZU2EgzIsw8DmdVIveTHEs6MowLwr1TVF0FZ+A5jSt3qCnalgqDU06ZWC+xF9qSVcQ0IrCPOeEdVqDLjIwmF/7JEGRgK5LmBfY58oaaRfWaQ7azb68VtsLdOUCum46GMD3m10WbRwUVKB9BjbevHGzS5+Arru+NzCaV3O07pSADkwL6vAB1RC8rHVZtDauCL8wDLqjJpOwjgRdOe7sMugG39O8JJqbdxmDDIFO0WYS1qGgK7dzizAwcJqhfTm0N9BjYG3eeI0mYR0LunKH0xbMm4M5DiiFA0z0Uo31lx7S9APVjgPtw6N+QU9zRBkEtIAW0AI6WEFPc9xUrENBT2VeZBbQijSFWTMqoC2ZApgkoFXpEWYHOwGtSFzPUEAr0jjmFWYBrUj+P443VkCr0mi/oEcJaFUa4Rf0HwS0Kg31C/peAa1KqcwyMAGtaOB/EDMxKwP/imYNBzAfFPMIaBVyo5df0L1s38YnSEBfRje/oLtpv6bDIaDL0Nkv6E5+NgIS0HVQCTr4Bd3B4s9eBy3oH9Ga+UxesYBWoYu41S/oWzRfR+oY0IXMzhwx1+1MI6AD1Dnmq7WRJn6fvkGBPsNs6R1Wj29cCOifKI95wSJEq51mHAz6JLtsN1dAq9AxFvRRAa1CWSzoIwJahQ6yoA8IaBXKZEHvFdAqtIsFnS6gVWgbC/ozAa1CH7OgNwtoFUpjQW8Q0Cr0bxb0egGtQqtZ0O8KaBV6mwW9QkCr0Bss6H8IaBVayoJeIqBVaBEL+lUBrUIvs6BfEtAq9CILer6AVqFnWNBPC2gVepIFPVNAqxC/n/RUAa1CD7OgJwhoFRrLgh4joFXovhrbFkegKSmixrbHwwS0Ct2NWPTEZCzGJnyFbOSQsumnTdQjnEx/icXvBLQK7cZJP2+peOmvGQJaJKAFtIAWCWgBLRLQAlpAiwS0gBYJaAEtoEXBBtqLcvyIs/geOfgPvsYBZGIPdmEndmA7aQcpHbuxD1/gELJwFLnIwwWUabsbjU3ZVhCUEzhMsDZgBRZhLqZjHIYjBT1wB1qhBZqiCSIRgXA0RhhCSa4ranRNlb9V/n8YHdGYjoug46MQg0S0R1f0wxD8EZMwGy/hdazDVrol2SjApeAF7cY5qnF78QGW4lmMx2D8ilDGIZrgBPYdzsBSGN2G5nQbOmIgxmAmXsG7+Jyehh9Q6kzQbhTiOD3mq/AiYR1ENTSRihgCPVM44tEOvTAas7Acn1BDZU6tV9SilpB5mViJ5zCKHv7WBj67pGtyIQGdqdmZgWX4DCdRTM2craC9VHMvUoPwJp5AKm6n9jEYk4sauf6YiL8R9Hxy0F7rQFdOhm7EnzGS2rowNKTUCG2opj+NNfg2gA3gDB7moRjhI2pzh+I28vMhaNjJRU41hdr0tdSiu9WALqTGYQkeQAeN3Zl9KYQazNa4j+KX7eSjvHUHXYHT+JRi20EUL4QKT0PNSgL6Uh3fSA2rmwddQQ3+ZsyhU+KEXYCpclXVk0ij6Nx9I2gvdXfTMY8C+VghpShFU9/0OWpSiqsGBXCM4sXhVPElmZPiMYx6xEf/B0EnYKAjJV56AAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE2LTAxLTIxVDE4OjI3OjQ2KzAyOjAwlRHnqQAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxNi0wMS0yMVQxODoyNzo0NiswMjowMORMXxUAAAAASUVORK5CYII=");
+
+}
+		.icon_search_google {
+    background-image: url("data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MCA1MCIgaWQ9IkxheWVyXzEiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDUwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIj48cGF0aCBkPSJNNDUsMUg1QzIuOCwxLDEsMi44LDEsNXY0MGMwLDIuMiwxLjgsNCw0LDRoNDBjMi4yLDAsNC0xLjgsNC00VjVDNDksMi44LDQ3LjIsMSw0NSwxeiIgZmlsbD0iI0ZGRkZGRiIvPjxnPjxwYXRoIGQ9Ik0yMC4zLDEwLjVjLTMuNywxLjMtNi45LDQuMS04LjcsNy42Yy0wLjYsMS4yLTEuMSwyLjUtMS4zLDMuOWMtMC43LDMuMy0wLjIsNi45LDEuMyw5LjkgICBjMSwyLDIuNCwzLjcsNC4yLDUuMWMxLjYsMS4zLDMuNSwyLjMsNS42LDIuOGMyLjYsMC43LDUuMywwLjcsNy44LDAuMWMyLjMtMC41LDQuNS0xLjYsNi4zLTMuM2MxLjktMS43LDMuMi0zLjksMy45LTYuNCAgIGMwLjgtMi42LDAuOS01LjQsMC40LTguMWMtNC44LDAtOS42LDAtMTQuNCwwYzAsMiwwLDQsMCw2YzIuOCwwLDUuNiwwLDguMywwYy0wLjMsMS45LTEuNSwzLjctMy4xLDQuN2MtMSwwLjctMi4yLDEuMS0zLjQsMS4zICAgYy0xLjIsMC4yLTIuNSwwLjItMy43LDBjLTEuMi0wLjItMi40LTAuOC0zLjQtMS41Yy0xLjYtMS4xLTIuOS0yLjgtMy41LTQuN2MtMC43LTEuOS0wLjctNCwwLTZjMC41LTEuMywxLjItMi42LDIuMi0zLjYgICBjMS4yLTEuMywyLjgtMi4yLDQuNi0yLjVjMS41LTAuMywzLTAuMyw0LjUsMC4yYzEuMiwwLjQsMi40LDEuMSwzLjMsMS45YzAuOS0wLjksMS45LTEuOSwyLjgtMi44YzAuNS0wLjUsMS0xLDEuNS0xLjUgICBjLTEuNC0xLjMtMy4xLTIuNC00LjktMy4xQzI3LjMsOS40LDIzLjYsOS40LDIwLjMsMTAuNXoiIGZpbGw9IiNGRkZGRkYiLz48Zz48cGF0aCBkPSJNMjAuMywxMC41YzMuMy0xLjEsNy0xLjEsMTAuMywwLjFjMS44LDAuNywzLjUsMS43LDQuOSwzLjFjLTAuNSwwLjUtMSwxLTEuNSwxLjUgICAgYy0wLjksMC45LTEuOSwxLjktMi44LDIuOGMtMC45LTAuOS0yLjEtMS42LTMuMy0xLjljLTEuNC0wLjQtMy0wLjUtNC41LTAuMmMtMS43LDAuNC0zLjMsMS4zLTQuNiwyLjVjLTEsMS0xLjgsMi4zLTIuMiwzLjYgICAgYy0xLjctMS4zLTMuMy0yLjYtNS0zLjlDMTMuNCwxNC42LDE2LjYsMTEuOCwyMC4zLDEwLjV6IiBmaWxsPSIjRUE0MzM1Ii8+PC9nPjxnPjxwYXRoIGQ9Ik0xMC4zLDIyYzAuMy0xLjMsMC43LTIuNiwxLjMtMy45YzEuNywxLjMsMy4zLDIuNiw1LDMuOWMtMC43LDEuOS0wLjcsNCwwLDZjLTEuNywxLjMtMy4zLDIuNi01LDMuOSBDMTAuMSwyOC44LDkuNiwyNS4zLDEwLjMsMjJ6IiBmaWxsPSIjRkJCQzA1Ii8+PC9nPjxnPjxwYXRoIGQ9Ik0yNS4zLDIyLjFjNC44LDAsOS42LDAsMTQuNCwwYzAuNSwyLjcsMC40LDUuNS0wLjQsOC4xYy0wLjcsMi40LTIsNC42LTMuOSw2LjRjLTEuNi0xLjMtMy4yLTIuNS00LjktMy44ICAgIGMxLjYtMS4xLDIuNy0yLjgsMy4xLTQuN2MtMi44LDAtNS42LDAtOC4zLDBDMjUuMywyNi4xLDI1LjMsMjQuMSwyNS4zLDIyLjF6IiBmaWxsPSIjNDI4NUY0Ii8+PC9nPjxnPjxwYXRoIGQ9Ik0xMS42LDMxLjljMS43LTEuMywzLjMtMi42LDUtMy45YzAuNiwxLjksMS45LDMuNiwzLjUsNC43YzEsMC43LDIuMiwxLjIsMy40LDEuNWMxLjIsMC4yLDIuNCwwLjIsMy43LDAgICAgYzEuMi0wLjIsMi40LTAuNywzLjQtMS4zYzEuNiwxLjMsMy4yLDIuNSw0LjksMy44Yy0xLjgsMS42LTMuOSwyLjctNi4zLDMuM2MtMi42LDAuNi01LjMsMC42LTcuOC0wLjFjLTItMC41LTMuOS0xLjUtNS42LTIuOCAgICBDMTQuMSwzNS42LDEyLjYsMzMuOCwxMS42LDMxLjl6IiBmaWxsPSIjMzRBODUzIi8+PC9nPjwvZz48L3N2Zz4=");
+}
+		</style>
+		<script src="search.js">
+		</script>
+	</head>
+	<body>
+		<form action="https://www.google.com/search" method="GET">
+			<img class="icon_search_google"/>
+			<input name="ie" value="utf-8" type="hidden">
+			<input name="oe" value="utf-8" type="hidden">
+			<input name="aq" value="t" type="hidden">
+			<input name="q" class="search" size="128" placeholder="Google" autocomplete="off" type="text">
+			<input name="submit" value="Go" formtarget="_blank" type="submit">
+		</form>
+		<!-- Bing -->
+		<form action="https://www.bing.com/"
+			>
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACP0lEQVR42tWVPUxTURTH//e9NoVqrMYYAg46MCMxMXQTY4RWxEGHJoS4kLgIOIAGJQyEGE2YSJwcjFFKYtQFQmFychASE1lwYHDAVKQBEhJIad971//rl6/l1vKgDp7k9Z77cc7vnnPPvRX4xyKcHWseExJIpk3M7CTx+fRtGBVspVtAjE04Z7jOnzmueKS3Y03h2Gkr3QBCzjEpECRgsVopckaQndPQorX9Z4CiFBEQjG/i25kTqPVdx3r1I9DRsrKKpcYGLHPghwVMWxIz8Q2snO8+WhUVANo1LO7FMOjVMI4/FbNsg+yPJb1w6hbMw6VIR9AG/HyLQF0A3zlyUuFnjaBZITC9l8ZHfyd2XEdgq6kYnnk0PMT+u1DQkym88d/EHdcR2OruLOp9OiZpdKVczgmYIqD7UBHkxZjHRU4O8ItkVhRHEHUHUNwDpqpZ1zDGBR2l6XILkFLDJb0NXzKO59DI7Y7yMCMZtPoMKgLyZyDTFsbYjuoCDXQ6zMU97HtRXrZTBu7V3EC0UgQGZ/qkxDvqD7iol+2xkt06q4j3D1FTYsgbRtzpUwVopeVdTpyjPoBs3Zc+zQUA6/+rvRlPCJ9UIZUC3tPK4OBlduvwd9mi85FfW3hxtqv8H1MRgOXXw5N7TtWnOsCcmHT80rQw7OtAosImigE5yAVCXlNt2gcQWLAs9HvCB3++hWpw4wNqAn480QTuI1uOCe76cWIbr+oj6kfNFSAvrPurHoHQbhpPj3di043jAwGqIb8BY8rxGTjYEKsAAAAASUVORK5CYII"/>
+			<input  name="q" placeholder="Bing search" value="" maxlength="1000" autocomplete="off" spellcheck="false" type="search">
+			<input title="Search" name="go" formtarget="_blank"	type="submit">
+			<input value="FBIO" name="pc" type="hidden">
+			<input id="sa_qs" name="qs" value="ds" type="hidden">
+			<input value="QBLH" name="form" type="hidden">
+		</form>
+		<!-- search.yahoo.com/search -->
+		<form action="http://search.yahoo.com/search" method="GET">
+			<img class="icon_search_yahoo"/>
+			<input name="ei" value="utf-8" type="hidden">
+			<input class="search" name="p" placeholder="Yahoo!" autocomplete="off"
+			type="text"><input name="submit" value="Go" formtarget="_blank"
+			type="submit">
+		</form>
+		<!-- https://duckduckgo.com/?q=search&kp=-1&kl=us-en -->
+		<form action="https://duckduckgo.com/">
+			<img class="icon_search_yahoo"/>
+			<input name="q" placeholder="DuckDuckGo Search" value="" spellcheck="false" type="search"/>
+			<input name="submit" value="Go" formtarget="_blank"
+			type="submit">
+		</form>
+		<!-- https://www.youtube.com/ -->
+		<form action="https://www.youtube.com/results" class="style-scope ytd-searchbox">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAB/0lEQVR42u2VzUsbQRjGZ+IGTPGkJ4uNzWrSQjFpTxGK4gfSi3otPRQ8SJH+E/Y/iHpooaWl0EPxmLSoRIxft1xM/cI0MRu9iIJBVDRNNvP2SdgRPewmwvbQ0r28z/syM7993tmd4ewPP/w/oGbAUqvb0aQofZBdROThnDdBu6Cd0FyORc7KKSIhEkpFyEvoY2gNeuVMiMWn2T1xBcDiSmNd3XcMemYsQsaiN/T13GyMoaMXQgwGtaxeKa6rnucIX23uzgt/RpuuADba1PcAj1q80W0dlPWHjt3MKwlYQL3XbILD5eJMCEaFwm0AMQD6ZYsSCH4zr/U+H3N//MQOJkLsPBxmpOu1tGgdLXosHSQB9pq9EQDcOztX+YJOt7fpaGqS/4rFCAUrBz/h4IF0kEZQrRy0z8xe5XqxyHLxOMu9GWe6pplNy8BBu3SQAritmgOZ5zc3+WEoROcry1YO0nDglYAd1H3VAPlUih1NhOg0GuUkRLVNTgLwUALWUA+YTXA23+UNnUF2EokwKpVq/YoSADyRezCP0G/Dz3X9WcAeDEgHbwEes/lHewcHryVgCPWwzYBhAL5VipF7Lfy+0/kZ8qVN7fmSK5VGevb26cZ98EP1PHJw3m0c140o3YFWoB3GEG4c12TE8pGsQ1/I41oQrQYy2pZc8x+60f5awG8dVq0o+cA74wAAAABJRU5ErkJggg"/>
+			<input id="search" autocapitalize="none" autocomplete="off" autocorrect="off" autofocus="" name="search_query"
+			spellcheck="false" placeholder="Search" aria-label="Search" aria-haspopup="false"
+			aria-autocomplete="list" dir="ltr"		 type="text"/>
+			<button aria-label="Search" type="submit" formtarget="_blank">Search</button>
+		</form>
+		<!-- en.wikipedia -->
+		<form action="http://en.wikipedia.org/wiki/Special:Search" method="GET">
+			<img src="data:;base64,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"/>
+			<input class="search" name="search" placeholder="en.wikipedia.org" type="text">
+			<input name="submit" value="Go" formtarget="_blank" type="submit">
+		</form>
+		<!-- IOrg google -->
+		<form action="https://https-www-google-com-ph.0.discoverapp.com/search" method="GET">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAC3UlEQVR42s1VX0jTURQ+xy03/6XT5nTqpJkzBCcVRRlERUT2B0RnhkXay/RFAw0roxphSFkqRShGZFJkZZkYQRSRIrV8iKWV6dRamVpTp7ksddvpbi8m+W+/FDov93LvuRy+833fuQhJWhsQgSMQke1p2v2fZ3PJt29ZAZot6d8LLGDMCYFC6oaZsQEUKhZgjMKTvIQ8R0rP0Dj2Do7Ridtd8Eg3xK1Fe9YvgcL9MtyW30pNhhH09+ZTbU4ErJZ7QOWLAUy+0E4ODrm0SC4RwNtzSih5/BWyKj5NnPsLoKVQCa58F0gs1kOVdoBbi/KSgik3TgpHbn7GszXdk0iuPRwBO1eK8Fq9kVIvdXBT0fWMMEqO8YPLT42YVtY5qcCxhCDI2x2CNxr6aN/Fdm4t0qiC4KQqGLpNY7A0QwdjlonUQ7sCoWCvDA6UdkL5MyO3FklFi6iZceDrwce86i90/FaX457HQ6jTREL/sAXjz7eR1TobyTOoaFWYJ1xJk6NS5kYPmRR1H3/Q9hU+oDOMgLrsA1ostvlxMvMAKUPdsSY73HEmVr9yIJhXJ4cHCqGVydP+3i7dzHIDWKwzP58TAnRBXBYgJKZ/LE4JpQhWyB51LcMODkxmCzcEPh48yI0LAtVaX9DqzdDYboaewXFQytwhh6mIz8h+3jYMGzTvwGpzEoHExxUbTkWyO4Atp1vQ8G10kg82RXnD/WwFegldKKFID9WNJudILlXLUb1ZTKklnVBR3zfluE7ZKMar6XI6WtkFZ2q6nWtRU0EURIW4Q0JhG9xrNE0Jf7lUyGZSNKgYgrsvp55H0yKoylJg/BoRPXnzHWLz3yMz018I0rdK8CAb49E5zXaXO9eicPYH1GsiSbKYz4g0Y8GDHtKydeinhaQiV0hkxCet88PEIj119P7ipiI2+yFrRyDYnRsmEYKAj9DPJPmaufgOG9EVdUYYtcyDD/77T9/mWBcofgNsQFTX32B6QAAAAABJRU5ErkJggg"/>
+			<input  value="" autocomplete="off"  maxlength="2048" name="q" placeholder="FB Google"
+			type="text">
+			<button  value="Search" type="submit" formtarget="_blank">Google</button>
+			<input name="nomo" value="1" type="hidden">
+			<input name="hl" value="en" type="hidden">
+		</form>
+		<!-- IOrg Bing -->
+		<form action="https://http-www-bing-com.0.discoverapp.com/search"
+			id="sb_form" class="sw_box">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACP0lEQVR42tWVPUxTURTH//e9NoVqrMYYAg46MCMxMXQTY4RWxEGHJoS4kLgIOIAGJQyEGE2YSJwcjFFKYtQFQmFychASE1lwYHDAVKQBEhJIad971//rl6/l1vKgDp7k9Z77cc7vnnPPvRX4xyKcHWseExJIpk3M7CTx+fRtGBVspVtAjE04Z7jOnzmueKS3Y03h2Gkr3QBCzjEpECRgsVopckaQndPQorX9Z4CiFBEQjG/i25kTqPVdx3r1I9DRsrKKpcYGLHPghwVMWxIz8Q2snO8+WhUVANo1LO7FMOjVMI4/FbNsg+yPJb1w6hbMw6VIR9AG/HyLQF0A3zlyUuFnjaBZITC9l8ZHfyd2XEdgq6kYnnk0PMT+u1DQkym88d/EHdcR2OruLOp9OiZpdKVczgmYIqD7UBHkxZjHRU4O8ItkVhRHEHUHUNwDpqpZ1zDGBR2l6XILkFLDJb0NXzKO59DI7Y7yMCMZtPoMKgLyZyDTFsbYjuoCDXQ6zMU97HtRXrZTBu7V3EC0UgQGZ/qkxDvqD7iol+2xkt06q4j3D1FTYsgbRtzpUwVopeVdTpyjPoBs3Zc+zQUA6/+rvRlPCJ9UIZUC3tPK4OBlduvwd9mi85FfW3hxtqv8H1MRgOXXw5N7TtWnOsCcmHT80rQw7OtAosImigE5yAVCXlNt2gcQWLAs9HvCB3++hWpw4wNqAn480QTuI1uOCe76cWIbr+oj6kfNFSAvrPurHoHQbhpPj3di043jAwGqIb8BY8rxGTjYEKsAAAAASUVORK5CYII"/>
+			<input name="iorg_service_id_internal" value="803478443041409;AfqInTeK9zmLYBQS" type="hidden">
+			<input name="iorgbsid"
+			value="AZyAFsC7TJyFQovDSGDoIOdnAjL0PngjWGZJzZ9r5GZCcL98iArWgTGh5EHK6YrmtXZFD3Ptet2Pq6tJ0OmXUiB2"
+			type="hidden">
+			<input class="b_searchbox" id="sb_form_q" name="q" placeholder="FB Bing search" value="" maxlength="1000"
+			autocomplete="off" spellcheck="false" type="search">
+			<input class="b_searchboxSubmit" id="sb_form_go" title="Search" tabindex="0" name="go" formtarget="_blank"
+			type="submit">
+			<input value="FBIO" name="pc" type="hidden">
+			<input id="sa_qs" name="qs" value="ds" type="hidden">
+			<input value="QBLH" name="form" type="hidden">
+		</form>
+		<!-- IOrg google image -->
+		<form action="https://https-www-google-com.0.discoverapp.com/search" name="f">
+			<input name="tbm" value="isch" type="hidden">
+			<input name="source" value="hp" type="hidden">
+			<input value="en-PH" name="hl" type="hidden">
+			<input name="biw" type="hidden">
+			<input name="bih" type="hidden">
+			<input class="lst" value="" placeholder="FB Google Images" maxlength="2048" name="q" size="57" autocomplete="off">
+			<input class="lsb" value="Search Images" name="btnG" formtarget="_blank" type="submit">
+			<input id="gbv" name="gbv" value="1" type="hidden">
+		</form>
+		<!-- IOrg wikipedia -->
+		<form class="header" action="https://https-en-m-wikipedia-org.0.discoverapp.com/w/index.php" method="get">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAACLElEQVR42r2WXWiOYRjHrzfUFDmdqeV7+UjKwYaWUUsOHGuWkJK2A1ujRr6mlPKVIw58pAwHcqCUnDggUhxQylYbaWyI1NBSzO9y/5+6Pd7neW3Z7vrV/V7vc9//+/q6n6dgYUyFA9AI5bIVYDg1j21ZzwxAJxyGwYI2vwdLMhaMVCCZP4VanxyDXTY247gLvC0RltF68DtcyWR4jAT+WvDfx7h5cN8TkhKvg53QAEOyVcJpC+X8TbZlem4L/IzWe+GsTARewwOJPIF1FvqiBq7ANolcgK1wXRvMhA5YDjfgpIT3wQo/UDpEt2A9VMBLmCR7q06+B47AXai3UOuL9Mx7CZ6HjekQxXFdCs8sdGODbN6dc6AMXsEaPXcuWnsILsMLHayogP++qhNUw8PI3iIvVsMj6IYZWjuk/Pj1sMNKlOkPqIIeCdTI/gZmw3fYr82ScVYeeFgnx5tllam7vl0h6ozsjfLwImyW3Q+0UFXUntons9Hc5bnwTjH3UAwqDx9gPjyHiXATNqkSp6U3ymu0U9AGe1U5B+ES1CqZ12ADrLJQpkctp9GKCXyBWbI9hsVwxkJ9L4B5FvqiDnotXJgjvos6lDwP1xQJTYAmiXnS65XkoqPUXfTRQvO4N7dhrf7vk6gnuEtCuXdR3oW120LH3kn93wyfVWWWJ+AvnOk5YfIu/mShFOPh674qF1mjP3lltuWdwkZ/XZ8Yl5e+2Z+fLXnh+pfRb9Fnyy9p2M36g4KS2wAAAABJRU5ErkJggg"/>
+			<input class="search" name="search" id="searchInput" autocomplete="off" placeholder="FB Search Wikipedia" value=""
+			type="search">
+			<button id="searchIcon" class="mw-ui-icon mw-ui-icon-element mw-ui-icon-magnifying-glass" type="submit"
+			formtarget="_blank">Search     </button>
+		</form>
+		<!-- IOrg WikiHowTo -->
+		<form action="https://https-m-wikihow-com.0.discoverapp.com/wikiHowTo?iorg_service_id_internal=1565619690390248%3BAfrMH_n6QnlNf4wi">
+			<input name="iorg_service_id_internal" value="1565619690390248;AfrMH_n6QnlNf4wi" type="hidden">
+			<input name="iorgbsid"
+			value="AZwy3LVoflNaQrzAYt2DPhw7NvJVp2q5kMm39xV7iCBZH3UIk8r3JVswgrzrukXhA0Wi8pyUNd5mzwtL6rC2mGqn"
+			type="hidden">
+			<input id="nojssb_input" maxlength="2048" name="search" autocomplete="off" value="" dir="ltr" spellcheck="false"
+			placeholder="FB How to..." type="search">
+			<button id="nojssb_btn" type="submit" formtarget="_blank">
+			<div class="s_text">Search</div>
+			</button>
+		</form>
+		<!-- Iorg Search -->
+		<form id="iorg" method="get" action="https://http-www-bing-com.0.discoverapp.com/">
+			<img src="data:;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABPlBMVEUAAADpj/2pSr2uUcKVQKrIDuWDNrymSbqyVceVU+KiCruPSNPqkf95HaCkRrnTeOiGGp2BK6esUcWpCsK4VcavAL/ZgO2YV+i/Ed6AKrGqDcSlSLqkaf6WDbKWO6+lSbmBM7efCLekSsCMRM6IObuLEaV+LLBzFpXBZdaqGMOqF8OFJ5udRLqeD7aHI7N6HZ+GMry1W8yPPLqXLqyLNK+EIpivIMd5D5eEN72+ZNahKLibNLGjCbyQOcucIcaqFcupTL2oCsLphf+sT8CDCZ6FOMB3HJXpgP+PMKOSRsl+JaqxVMarCsaGO8KsS8KFO8G2EcuwCcqHOcGKOsWqC8Wjaf/hEf/rkv/qkf7ghvTYEPXOc+KiaP7EadiQS9i9DNiaW+3OD+vRd+XNcuLADdu8YNGIP8iuCsisCsaPNKq+35IvAAAAVXRSTlMA/uCoBv79/TP++/r19fPy6ejcpwkI/vz49/b29fPz8vLy8O/v7uzs6+vr6+jo6Ojl5OPj4uLh4d/e3t7d2NjX1tDNy8rJyMfBvritraqmpTs6MTAw+mtZLgAAANRJREFUGNMlz1WWwkAURdGbpEkCjdO0u7u7O+6UQHBn/hOgqjh/+328tS5ktqH7V07+S5g2l7K6FU2rrJu5GeXPvvYd83K+XWv8yUtiHLgfjo69PERIIwkUzdW9HqXtm9MFQmq+MjLudxcVBXeIaCmCx7em9OI+kZ2/YnNN2nWp3PrYwkFVuHpBVL7nMzzIQ9BUnr3q3OFXvDw6HCiHmRNHwUOpzkLC7jDjlg2km8vzLHC7e/3EWN0AEP3yaEzF6z9qTDTy4shxjmUIq/JZ3b+hGzZEE4KCMzbkYXfnAAAAAElFTkSuQmCC">
+			<input name="url" value="" placeholder="Enter URL" type="text">
+			<input value="Browse" type="submit" formtarget="_blank"	>
+		</form>
+
+		<form id="fbgwebcache" method="get" action="https://http-webcache-googleusercontent-com.0.discoverapp.com/search">
+			<input name="q" value="" placeholder="webcache-googleusercontent" type="text">
+			<input value="Browse" type="submit" formtarget="_blank"	>
+		</form>
+
+		<form id="fbact" method="get" action="" target="_blank"></form>
+					<i class="icon_search_yahoo" style="width: 60px;
+    height: 18px; ">hfftfuytfuytfuytfutjh</i>
+
+	</body>
+</html>

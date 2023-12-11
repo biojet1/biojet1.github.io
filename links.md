@@ -1,0 +1,22 @@
+---
+layout: default
+title: About
+
+links:
+    - devels:
+        - name: libRSvg
+          url : https://gitlab.gnome.org/GNOME/librsvg
+        - name: Inkscape
+          url : https://gitlab.com/inkscape/inkscape
+        - name: Moviepy
+          url : https://github.com/Zulko/moviepy
+
+---
+
+# Projects
+
+<div align="center">
+  {% for item in page.links.devels %}
+    <a href="{{ item.url }}">{{ item.name }}</a>
+  {% endfor %}
+</div>

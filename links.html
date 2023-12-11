@@ -15,11 +15,11 @@ links:
 <b>{{ page.links }}</b>
 <b>{{ page.title }}</b>
   {% for item in page.links.devels %}
-    <a href="{{ item.url }}">{{ item.name }}</a>
+    0[<a href="{{ item.url }}">{{ item.name }}</a>]
   {% endfor %}
   {% for item in page.links %}
-  <b>{{ item }}</b>
+  1[<b>{{ item }}</b>]
   {% endfor %}
   {% for item in page.links.devels %}
-  <b>{{ item }}</b>
+  2[<b>{{ item }}</b>]
   {% endfor %}

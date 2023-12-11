@@ -27,15 +27,16 @@ apps:
 
 <b>{{ page.title }}</b>
 
-<b>Projects</b>
+<h2>Projects</h2>
 
 {% for item in page.devels %}
   <a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
+<hr/>
 
-<b>Apps</b>
+<h2>Apps</h2>
 
 {% for item in page.apps %}
   <a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
-
+<hr/>

@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Links
-
 links:
     - devels:
         - name: libRSvg
@@ -19,7 +18,8 @@ devels:
     url : https://github.com/Zulko/moviepy  
   - name: Inkscape Extensions
     url : https://gitlab.com/inkscape/extensions
-
+  - name: MLT framework
+    https://www.mltframework.org/docs/
 apps:
   - name: FreeCAD
     url : https://www.freecad.org/
@@ -35,16 +35,16 @@ apps:
 
 <h2>Projects</h2>
 {% for item in page.devels %}
-<a href="{{ item.url }}">{{ item.name }}
+<a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
-
+<hr/>
 
 <h2>Apps</h2>
 {% for item in page.apps %}
-<a href="{{ item.url }}">{{ item.name }}
+<a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
-
 <hr/>
+
   {% for item in page.links['devels'] %}
     0[<a href="{{ item.url }}">{{ item.name }}</a>]
   {% endfor %}

@@ -10,6 +10,13 @@ links:
           url : https://gitlab.com/inkscape/inkscape
         - name: Moviepy
           url : https://github.com/Zulko/moviepy
+links_devels:
+    - name: libRSvg
+      url : https://gitlab.gnome.org/GNOME/librsvg
+    - name: Inkscape
+      url : https://gitlab.com/inkscape/inkscape
+    - name: Moviepy
+      url : https://github.com/Zulko/moviepy  
 
 ---
 <b>{{ page.links }}</b>
@@ -26,3 +33,8 @@ links:
     A[<a href="{{ item.url }}">{{ item.name }}</a>]
     {% endfor %}
   {% endfor %}
+  {% for item in page.links_devels %}
+    0[<a href="{{ item.url }}">{{ item.name }}</a>]
+  {% endfor %}
+
+  

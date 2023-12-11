@@ -27,19 +27,25 @@ apps:
     url : https://gitlab.com/inkscape/inkscape
   - name: Blender
     url : https://www.blender.org/
+  - name: Avidemux
+    url : https://avidemux.sourceforge.net/
+  - name: Shotcut
+    url : https://shotcut.org/
 ---
 
 <h2>Projects</h2>
 {% for item in page.devels %}
 <a href="{{ item.url }}">{{ item.name }}
 {% endfor %}
+
+
 <h2>Apps</h2>
 {% for item in page.apps %}
 <a href="{{ item.url }}">{{ item.name }}
 {% endfor %}
 
 <hr/>
-  {% for item in page.links.devels %}
+  {% for item in page.links['devels'] %}
     0[<a href="{{ item.url }}">{{ item.name }}</a>]
   {% endfor %}
   {% for item in page.links %}

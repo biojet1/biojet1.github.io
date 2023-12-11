@@ -24,15 +24,18 @@ apps:
     - name: Shotcut
       url : https://shotcut.org/
 ---
+
 <b>{{ page.title }}</b>
 
-<h2>Projects</h2>
+<b>Projects</b>
+
 {% for item in page.devels %}
-<a href="{{ item.url }}">{{ item.name }}</a>
+  <a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
 
-<h2>Apps</h2>
+<b>Apps</b>
+
 {% for item in page.apps %}
-<a href="{{ item.url }}">{{ item.name }}</a>
+  <a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
 

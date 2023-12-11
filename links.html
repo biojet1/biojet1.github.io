@@ -1,14 +1,6 @@
 ---
 layout: default
 title: Links
-links:
-    - devels:
-        - name: libRSvg
-          url : https://gitlab.gnome.org/GNOME/librsvg
-        - name: Inkscape
-          url : https://gitlab.com/inkscape/inkscape
-        - name: Moviepy
-          url : https://github.com/Zulko/moviepy
 devels:
   - name: libRSvg
     url : https://gitlab.gnome.org/GNOME/librsvg
@@ -37,26 +29,10 @@ apps:
 {% for item in page.devels %}
 <a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
-<hr/>
+<hr>
 
 <h2>Apps</h2>
 {% for item in page.apps %}
 <a href="{{ item.url }}">{{ item.name }}</a>
 {% endfor %}
-<hr/>
-
-  {% for item in page.links['devels'] %}
-    0[<a href="{{ item.url }}">{{ item.name }}</a>]
-  {% endfor %}
-  {% for item in page.links %}
-    1[<b>{{ item }}</b>]
-  {% endfor %}
-
-  {% for devels in page.links %}
-    {% for item in devels %}
-    A[<a href="{{ item.url }}">{{ item.name }}</a>]
-    {% endfor %}
-  {% endfor %}
-
-
-  
+<hr>
